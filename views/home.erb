@@ -1,0 +1,27 @@
+<!-- Add new capsules -->
+<section id="add_capsules">
+  <form  class="class" id="capsule_creator" action="/capsules" method="post">
+    <dl>
+      <dt>
+        <label for="capsule_message">Share the Love:</label>
+      </dt>
+      <dd>
+        <!-- !!! Our motto for messages is short and sweet... (limit to 100 characters) -->
+        <textarea name="capsule_message" placeholder="I appreciate..."></textarea>
+      </dd>
+    </dl>
+    
+    <!-- message submission -->
+    <div class="sidebyside">
+      <!--Save as draft-->
+      <fieldset class="actions">
+        <input type="submit" value="Save to Drafts">
+      </fieldset>
+      <!-- Add to dispenser -->
+      <fieldset class="actions ">
+        <input type="submit" value="Add to dispenser">
+      </fieldset>
+    </div>
+  </form> 
+</section>
+    

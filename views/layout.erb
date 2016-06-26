@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Capsules</title>
+    <link rel="stylesheet" href="/stylesheets/whitespace-reset.css">
+    <link rel="stylesheet" href="/stylesheets/common_styles.css">
+    <link rel="stylesheet" href="/stylesheets/layout.css">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Catamaran:200,400,600,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <header>    
+    <div class="logo">
+      <img src="../assets/logo-header-darkpink.png" alt="Capsules">
+     <nav>
+        <ul>
+          <li><a href="#add_capsules">Add</a></li>
+          <li><a href="#dispenser">Dispenser</a></li>
+          <li><a href="#drafts">Drafts</a></li>
+          <li><a href="#sent">Sent</a></li>
+        </ul>
+      </nav>
+    </div> 
+  </header>
+
+  <main>
+    <div class="flash">
+      <!-- Display flash messages -->
+      <% if session[:error] %>
+        <div class="error">
+          <p><%= session.delete(:error) %></p>
+        </div>
+      <% end %>
+      <% if session[:success] %>
+        <div class="success">
+          <p><%= session.delete(:success) %></p>
+        </div>
+      <% end %>
+    </div>
+    <!-- Yield to specific page content -->
+    <%= yield %>
+  </main>
+</body>
+<footer>
+  <nav>
+    <ul>
+      <li><a href="/settings">Settings</a></li>
+      <li><a href="/splash">About</a></li>
+    </ul>
+  </nav>
+</footer>
+</html>
