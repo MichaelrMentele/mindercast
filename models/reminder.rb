@@ -1,54 +1,7 @@
 require 'data_mapper'
 require 'bcrypt'
 require 'twilio-ruby'
-
-# class Reminder
-	
-# 	attr_accessor :phones, :message, :time_to_send
-
-# 	def initialize(phones, message, time_to_send)
-# 		@phones = phones
-# 		@time_to_send = time_to_send
-# 		@payload = message
-# 		@timestamps = []
-# 	end
-
-# 	def remind?
-# 		DateTime.now > @time_to_send
-# 	end
-
-# 	def remind
-# 		@phones.each do |phone|
-# 			send_text(phone)
-# 		end
-# 		timestamp
-# 	end
-
-# 	def send_text(phone)
-# 	  	# Hardcoded right now... not good will need to change
-# 		twilio_sid = "AC0016f4c55afaf79b77ec86e2bf32ec19"
-# 		token = "36077868d84cb02d517eb5d02199c08b"
-
-# 		client = Twilio::REST::Client.new(
-# 			twilio_sid,
-# 			token
-# 		)
-
-# 		client.messages.create(
-# 		to: phone,
-# 		from: "14255288374",
-# 		body: @payload
-# 		)
-# 	end
-
-# 	def timestamp
-# 		@timestamps.push([@phones, DateTime.now])
-# 	end
-# end
-
-#########
-
-
+require 'yaml'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/users.db")
 
@@ -98,8 +51,11 @@ class Reminder
 
 	def send_text(phone)
 	  	# !!! Hardcoded right now... not good will need to change
-		twilio_sid = "AC0016f4c55afaf79b77ec86e2bf32ec19"
-		token = "36077868d84cb02d517eb5d02199c08b"
+		# Load Twilio account auth info
+		# !!! This kinda sucks, should be included on User or some admin object
+		account_info = YAML.load_file("data/twilio_auth.yaml")
+		twilio_sid = account_info[:account_sid]
+		token = account_info[:auth_token]
 
 		client = Twilio::REST::Client.new(
 			twilio_sid,
