@@ -3,25 +3,50 @@
   <form  class="class" id="capsule_creator" action="/capsules" method="post">
     <dl>
       <dt>
-        <label for="capsule_message">Share the Love:</label>
+        <label for="name">Reminder Name</label>
       </dt>
       <dd>
-        <!-- !!! Our motto for messages is short and sweet... (limit to 100 characters) -->
+        <input type="text" name="name" placeholder="name">
+      </dd>
+      <dt>
+        <label for="capsule_message">What is your reminder?</label>
+      </dt>
+      <dd>
+        <!-- !!! Our motto for reminders is short and sweet... (limit to 100 characters) -->
         <textarea name="capsule_message" placeholder="I appreciate..."></textarea>
+      </dd>
+      <dt>
+        <label for="schedule">Enter date and time</label>
+      </dt>
+      <dd>
+        <input type="date" name="schedule">
+      </dd>
+      <dt>
+        <label for="phones">Enter Phone Numbers</label>
+      </dt>
+      <dd>
+        <input type="text" name="phones" placeholder="0001112222, 3334445555">
       </dd>
     </dl>
     
-    <!-- message submission -->
-    <div class="sidebyside">
-      <!--Save as draft-->
-      <fieldset class="actions">
-        <input type="submit" value="Save to Drafts">
-      </fieldset>
-      <!-- Add to dispenser -->
-      <fieldset class="actions ">
-        <input type="submit" value="Add to dispenser">
-      </fieldset>
-    </div>
-  </form> 
+      <!-- message submission -->
+      <div>
+        <!-- Add to dispenser -->
+        <fieldset class="actions ">
+          <input type="submit" value="Add Reminder">
+        </fieldset>
+      </div>
+    </form> 
+  </section>
+      
+  <!-- Display undispensed capsules collection -->
+  <section id="dispenser">
+    <h2>Reminders</h2>
+    <ul>
+      <% @reminders.each do |reminder| %>
+        <li><%= reminder.name %></li>
+      <% end %>
+    </ul>
+  </section>
+
 </section>
-    

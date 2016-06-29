@@ -1,0 +1,21 @@
+<!-- FOR TESTING PURPOSES ONLY -->
+<!-- Display user info -->
+<h2>User Info</h2>
+<ul>
+  <li>Name: <%= @user.username %></li>
+  <li>Password: <%= @user.password %></li>
+  <li>Phone: <%= @user.phone %></li>
+  <li>Email: <%= @user.email %></li>
+</ul>
+
+<h2>User Reminders</h2>
+<!-- Display user remindrs -->
+<ul>
+  <% @reminders.each do |reminder| %>
+    <li>id: <%= reminder.id %></li>
+    <li>name:<%= reminder.name %></li>
+    <li>message: <%= reminder.payload %></li>
+    <li>receivers: <%= reminder.phones%></li>
+    <li>send date: <%= reminder.time_to_send %></li>
+  <% end %>
+</ul>

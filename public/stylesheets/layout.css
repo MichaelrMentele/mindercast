@@ -1,0 +1,78 @@
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Catamaran', sans-serif;  
+  font-weight: 4000;
+  font-size: 1.2em;
+  color: #3f3f3f;
+  background: #ffffff;
+  margin:0;
+}
+
+main {
+  margin: 0 auto;
+  width: 550px;
+}
+
+header {
+  background: #FFF;
+  text-align: center;
+}
+
+nav {
+  padding: 0px;
+  padding-right:40px;
+  overflow: hidden;
+}
+
+nav ul{
+  list-style-type:none;
+  text-align: center;
+}
+
+nav li{
+  display: inline;
+  color:#666;
+  font-weight:600;
+  font-size:20px;
+  letter-spacing:.07em;
+}
+
+nav li a{
+    text-align: inherit;
+    padding: 5px 16px 14px 16px;
+    
+}
+
+nav li a:hover{
+    font-weight:600;
+}
+
+.flash {
+  background: lightyellow;
+}
+
+footer {
+  padding: 30px;
+}
+
+footer ul{
+  text-align: center;
+  margin: 0 auto;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  letter-spacing:.05em;
+  padding:5px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+footer li{
+  font-size: 1em;
+  color: #4571B7;
+  display:inline-block;
+  padding:0 10px;
+}

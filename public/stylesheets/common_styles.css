@@ -1,0 +1,154 @@
+a {
+  color: inherit;
+  text-decoration: none; 
+}
+
+dl {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+dd {
+  -webkit-margin-start: 5px;
+}
+
+form dt {
+  padding: 0 0 5px 0; 
+  margin: 0 auto;
+}
+
+form dd {
+  padding: 0 0 10px 0; 
+}
+
+form textarea{
+  width: 100%;
+  height: 130px;
+  padding: 5px 0 20px 5px;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 200;
+  font-size:17px;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  box-sizing: border-box; 
+}
+
+form {
+  margin: 0 auto;
+  width: 80%;
+}
+
+form input[type="text"], 
+     input[type="phone"],
+     input[type="email"]{
+  height: 40px;
+  padding: 5px 0 5px 5px;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 200;
+  font-size:18px;
+  border: 1px solid darkgrey;
+  border-radius: 10px;
+  box-sizing: border-box; 
+}
+
+form input[type="submit"] {
+  padding: 3px 25px;
+  margin: 0;
+
+  font-family: 'Catamaran', sans-serif;
+  font-weight:600;
+  font-size:16px;
+  letter-spacing:.04em;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  background: #FF7D7E;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease; 
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+form input[type="submit"]:hover {
+  cursor: pointer; 
+  color: #666;
+  border: 3px solid rgba(255,125,126,.65);
+  border-radius: 4px;
+  background: #fff;
+}
+
+fieldset{
+  -webkit-margin-start: 4px;
+  -webkit-margin-end: 4px;
+  -webkit-padding-before:0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0; 
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.2em auto;
+  text-align: center;
+}
+
+h3 {
+  color: tan;
+  margin: 0.2em auto;
+  text-align: center;
+}
+
+label{
+  font-family: 'Catamaran', sans-serif;
+  font-weight:400;
+  font-size: 20px;
+  margin-left:10px; 
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol > li:before {
+  content: "";
+  padding-right: 1em;
+}
+
+section, article {
+  width: 100%;
+  padding: 3em;
+  margin-bottom: 3em;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: lightgray;
+}
+
+.bang_emphasis {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.bang_emphasis > i {
+  padding: 10px;
+  border-radius: 10px;
+  color: #FFF;
+}
+
+.logo {
+  padding-bottom:10px;
+  margin:5px;
+}
+
+.sidebyside{
+  float:right;
+  clear:both;
+  display:inline-flex;
+}
+
